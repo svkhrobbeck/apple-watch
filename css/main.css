@@ -411,11 +411,13 @@ body {
 @media only screen and (max-width: 992px) {
   .offers-section-bottom {
     padding: 0 15px;
+    margin-top: 120px;
   }
 }
 @media only screen and (max-width: 576px) {
   .offers-section-bottom {
     flex-direction: column-reverse;
+    margin-top: 90px;
   }
 }
 .offers-section-bottom__content {
