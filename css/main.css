@@ -1,0 +1,313 @@
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2"), url("../fonts/roboto-v30-latin-regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/roboto-v30-latin-500.woff2") format("woff2"), url("../fonts/roboto-v30-latin-500.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto-v30-latin-700.woff2") format("woff2"), url("../fonts/roboto-v30-latin-700.woff") format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 2px dotted #000000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+  line-height: 1.5;
+  font-size: 18px;
+  font-weight: 400;
+  color: #999999;
+}
+@media only screen and (max-width: 992px) {
+  body {
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button {
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #df352c;
+  padding: 13px 19px;
+}
+@media only screen and (max-width: 992px) {
+  .button {
+    font-size: 17px;
+    padding: 10px 15px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .button {
+    font-size: 16px;
+    padding: 8px 11px;
+  }
+}
+
+.site-header {
+  padding: 20px 0;
+}
+.site-header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-header #hamburger-bar:checked + .hamburger-icons #open {
+  display: none;
+}
+.site-header #hamburger-bar:checked + .hamburger-icons #close {
+  display: block;
+}
+.site-header #hamburger-bar:checked ~ .sitenav .sitenav__list {
+  right: 0;
+}
+.site-header #open,
+.site-header #close {
+  font-size: 40px;
+  position: fixed;
+  right: 10px;
+  top: 40px;
+  color: #df352c;
+  background-color: #000000;
+  border-radius: 5px;
+  z-index: 101;
+  display: none;
+}
+@media only screen and (max-width: 576px) {
+  .site-header #open {
+    display: block;
+  }
+}
+.site-header .sitenav__list {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+@media only screen and (max-width: 576px) {
+  .site-header .sitenav__list {
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    width: 65%;
+    height: 100vh;
+    background-color: #df352c;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    padding: 20px 0 0 40px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 12px 18px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: 1s ease;
+  }
+}
+.site-header .sitenav__link {
+  color: #999999;
+}
+@media only screen and (max-width: 576px) {
+  .site-header .sitenav__link {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}
+.site-header .sitenav__help-input {
+  border: none;
+  border-bottom: 1px solid #999999;
+  padding: 5px;
+  max-width: 150px;
+  background-color: transparent;
+}
+@media only screen and (max-width: 576px) {
+  .site-header .sitenav__help-input {
+    display: none;
+  }
+}
+
+.hero-section {
+  margin-top: 100px;
+  position: relative;
+  padding: 0 0 387px;
+  border-bottom: 2px solid #999999;
+}
+@media only screen and (max-width: 1200px) {
+  .hero-section {
+    padding: 0 0 238px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .hero-section {
+    padding: 0 0 95px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hero-section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 30px;
+    margin-top: 60px;
+    padding: 0 0 40px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .hero-section {
+    margin-top: 10px;
+    gap: 10px;
+  }
+}
+.hero-section__content {
+  position: relative;
+  z-index: 2;
+}
+@media only screen and (max-width: 992px) {
+  .hero-section__content {
+    padding: 0 10px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hero-section__content {
+    padding: 0 10px;
+    text-align: center;
+  }
+}
+.hero-section__title {
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 64px;
+  line-height: 1.2;
+  font-size: 64px;
+}
+@media only screen and (max-width: 992px) {
+  .hero-section__title {
+    font-size: 54px;
+    margin-bottom: 52px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hero-section__title {
+    font-size: 46px;
+    margin-bottom: 44px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .hero-section__title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+}
+.hero-section__description {
+  margin-bottom: 44px;
+  max-width: 570px;
+  padding-left: 45px;
+  border-left: 2px solid #df352c;
+}
+@media only screen and (max-width: 992px) {
+  .hero-section__description {
+    max-width: 470px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hero-section__description {
+    max-width: none;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .hero-section__description {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+.hero-section-image {
+  background: url(../../images/watches-cut.jpg) no-repeat center;
+  width: 480px;
+  height: 800px;
+  max-width: 100%;
+  background-size: contain;
+  position: absolute;
+  top: -90px;
+  right: 0;
+  z-index: 1;
+}
+@media only screen and (max-width: 1200px) {
+  .hero-section-image {
+    width: 390px;
+    height: 650px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .hero-section-image {
+    width: 290px;
+    height: 480px;
+    top: -120px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hero-section-image {
+    background: url(../../images/watches.jpg) no-repeat center;
+    width: 418px;
+    height: 402px;
+    background-size: contain;
+    position: static;
+    top: 0;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .hero-section-image {
+    width: 380px;
+    height: 370px;
+  }
+}/*# sourceMappingURL=main.css.map */

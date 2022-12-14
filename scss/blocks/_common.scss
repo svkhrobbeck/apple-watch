@@ -1,0 +1,105 @@
+// Fonts
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2"),
+    url("../fonts/roboto-v30-latin-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/roboto-v30-latin-500.woff2") format("woff2"),
+    url("../fonts/roboto-v30-latin-500.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto-v30-latin-700.woff2") format("woff2"),
+    url("../fonts/roboto-v30-latin-700.woff") format("woff");
+}
+
+// General styles
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 2px dotted $black;
+}
+
+// Html styles
+html {
+  scroll-behavior: smooth;
+}
+
+// Body styles
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+  line-height: 1.5;
+  font-size: 18px;
+  font-weight: 400;
+  color: $gray;
+
+  @media only screen and (max-width: $tablet-l) {
+    font-size: 17px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    font-size: 16px;
+  }
+}
+
+// Container styles
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: $desktop;
+}
+
+// Visually hidden styles
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// Button styles
+.button {
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $red;
+  padding: 13px 19px;
+
+  @media only screen and (max-width: $tablet-l) {
+    font-size: 17px;
+    padding: 10px 15px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    font-size: 16px;
+    padding: 8px 11px;
+  }
+}

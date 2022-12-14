@@ -1,0 +1,125 @@
+.hero-section {
+  margin-top: 100px;
+  position: relative;
+  padding: 0 0 387px;
+  border-bottom: 2px solid $gray;
+
+  @media only screen and (max-width: $desktop) {
+    padding: 0 0 238px;
+  }
+
+  @media only screen and (max-width: $tablet-l) {
+    padding: 0 0 95px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 30px;
+    margin-top: 60px;
+    padding: 0 0 40px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+
+    @media only screen and (max-width: $tablet-l) {
+      padding: 0 10px;
+    }
+
+    @media only screen and (max-width: $tablet) {
+      padding: 0 10px;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    color: $black;
+    margin-bottom: 64px;
+    line-height: 1.2;
+    font-size: 64px;
+
+    @media only screen and (max-width: $tablet-l) {
+      font-size: 54px;
+      margin-bottom: 52px;
+    }
+
+    @media only screen and (max-width: $tablet) {
+      font-size: 46px;
+      margin-bottom: 44px;
+    }
+
+    @media only screen and (max-width: $tablet-l) {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 44px;
+    max-width: 570px;
+    padding-left: 45px;
+    border-left: 2px solid $red;
+
+    @media only screen and (max-width: $tablet-l) {
+      max-width: 470px;
+    }
+
+    @media only screen and (max-width: $tablet) {
+      max-width: none;
+      width: 70%;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      padding-left: 0;
+      border-left: none;
+    }
+  }
+
+  &-image {
+    background: url(../../images/watches-cut.jpg) no-repeat center;
+    width: 480px;
+    height: 800px;
+    max-width: 100%;
+    background-size: contain;
+    position: absolute;
+    top: -90px;
+    right: 0;
+    z-index: 1;
+
+    @media only screen and (max-width: $desktop) {
+      width: 390px;
+      height: 650px;
+    }
+
+    @media only screen and (max-width: $tablet-l) {
+      width: 290px;
+      height: 480px;
+      top: -120px;
+    }
+
+    @media only screen and (max-width: $tablet) {
+      background: url(../../images/watches.jpg) no-repeat center;
+      width: 418px;
+      height: 402px;
+      background-size: contain;
+      position: static;
+      top: 0;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      width: 380px;
+      height: 370px;
+    }
+  }
+}
