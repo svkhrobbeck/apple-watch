@@ -80,8 +80,16 @@
       border: none;
       border-bottom: 1px solid $gray;
       padding: 5px;
-      max-width: 150px;
+      max-width: 170px;
       background-color: transparent;
+
+      @media only screen and (max-width: $tablet-l) {
+        max-width: 155px;
+      }
+
+      @media only screen and (max-width: $tablet) {
+        max-width: 148px;
+      }
 
       @media only screen and (max-width: $mobile) {
         display: none;
