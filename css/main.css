@@ -145,6 +145,7 @@ body {
     background-color: #df352c;
     position: fixed;
     top: 0;
+    z-index: 100;
     right: -100%;
     padding: 20px 0 0 40px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 12px 18px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -302,6 +303,7 @@ body {
     height: 402px;
     background-size: contain;
     position: static;
+    z-index: none;
     top: 0;
   }
 }
@@ -310,4 +312,184 @@ body {
     width: 380px;
     height: 370px;
   }
+}
+
+.offers-section-top {
+  margin-top: 70px;
+}
+.offers-section-top__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+@media only screen and (max-width: 1200px) {
+  .offers-section-top__list {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .offers-section-top__list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.offers-section-top__item {
+  max-width: 350px;
+}
+@media only screen and (max-width: 768px) {
+  .offers-section-top__item {
+    text-align: center;
+  }
+}
+.offers-section-top .slide-squares {
+  display: flex;
+  margin-top: 20px;
+  gap: 10px;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .offers-section-top .slide-squares {
+    justify-content: center;
+  }
+}
+.offers-section-top .slide-squares span {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  transition: background-color 0.5s ease;
+  background-color: #999999;
+}
+.offers-section-top .slide-squares span:hover {
+  background-color: #000000;
+}
+.offers-section-top__heading {
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  font-size: 22px;
+  color: #000000;
+  font-weight: 700;
+}
+.offers-section-top__text {
+  color: #000000;
+  margin-bottom: 10px;
+}
+.offers-section-top__link {
+  color: #df352c;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.offers-section-top__link span {
+  display: inline-block;
+  width: 40px;
+  margin-right: 10px;
+  height: 3px;
+  background-color: #df352c;
+  vertical-align: middle;
+  transition: 0.5s ease;
+}
+.offers-section-top__link:hover span {
+  width: 60px;
+}
+.offers-section-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 150px;
+}
+@media only screen and (max-width: 992px) {
+  .offers-section-bottom {
+    padding: 0 15px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .offers-section-bottom {
+    flex-direction: column-reverse;
+  }
+}
+.offers-section-bottom__content {
+  width: 50%;
+}
+@media only screen and (max-width: 992px) {
+  .offers-section-bottom__content {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .offers-section-bottom__content {
+    width: 100%;
+    text-align: center;
+  }
+}
+.offers-section-bottom__title {
+  color: #000000;
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 1200px) {
+  .offers-section-bottom__title {
+    font-size: 54px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .offers-section-bottom__title {
+    font-size: 34px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .offers-section-bottom__title {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .offers-section-bottom__title {
+    font-size: 24px;
+  }
+  .offers-section-bottom__title br {
+    display: none;
+  }
+}
+.offers-section-bottom__description {
+  margin-bottom: 44px;
+  max-width: 570px;
+  padding-left: 45px;
+  border-left: 2px solid #df352c;
+}
+@media only screen and (max-width: 992px) {
+  .offers-section-bottom__description {
+    max-width: 450px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .offers-section-bottom__description {
+    max-width: 350px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .offers-section-bottom__description {
+    padding-left: 0;
+    border-left: none;
+    max-width: none;
+    margin-bottom: 24px;
+  }
+}
+.offers-section-bottom__image {
+  width: 40%;
+}
+@media only screen and (max-width: 768px) {
+  .offers-section-bottom__image {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .offers-section-bottom__image {
+    width: 70%;
+  }
+}
+.offers-section-bottom__img {
+  width: 100%;
+  height: auto;
 }/*# sourceMappingURL=main.css.map */
