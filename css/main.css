@@ -82,6 +82,10 @@ body {
   color: #ffffff;
   background-color: #df352c;
   padding: 13px 19px;
+  transition: opacity 0.4s ease;
+}
+.button:hover {
+  opacity: 0.8;
 }
 @media only screen and (max-width: 992px) {
   .button {
@@ -154,6 +158,14 @@ body {
 }
 .site-header .sitenav__link {
   color: #999999;
+  padding: 10px 0;
+  border-bottom: 2px solid transparent;
+  transition: opacity 0.5s ease, color 0.4s ease, border 0.4s ease;
+}
+.site-header .sitenav__link:hover {
+  border-bottom: 2px solid #000000;
+  color: #000000;
+  opacity: 0.8;
 }
 @media only screen and (max-width: 576px) {
   .site-header .sitenav__link {
@@ -490,6 +502,11 @@ body {
 }
 .offers-section-bottom__image {
   width: 40%;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+.offers-section-bottom__image:hover {
+  transform: scale(1.05);
 }
 @media only screen and (max-width: 768px) {
   .offers-section-bottom__image {
